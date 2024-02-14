@@ -5,8 +5,8 @@ from check import clean_csv
 from time import sleep
 
 ser = serial.Serial(port='COM3', baudrate=115200)
-sleep(3)
 model = joblib.load('model.pkl')
+sleep(3)
 eeg_buffer = []
 predict = False
 
@@ -17,7 +17,7 @@ try:
         eeg_buffer.append(eeg_signal)
 
         # Accumulate EEG signals and predict in batches
-        if len(eeg_buffer) >= 1000:  # Adjust batch size as needed
+        if len(eeg_buffer) >= 125:  # Adjust batch size as needed
             with open("./temp.csv", "w+") as f:
                 f.write('\n'.join(eeg_buffer))
             predict = True
