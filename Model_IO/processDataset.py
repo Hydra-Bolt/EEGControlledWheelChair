@@ -71,13 +71,12 @@ def process_data_with_sliding_window(df, window_duration, sampling_rate):
     return results
 
 def generate_model_input(df):
-    window_duration = 1  # seconds, adjust according to your preference
-    sampling_rate = 125  # Hz
+    window_duration = 1 
+    sampling_rate = 125 
     results = process_data_with_sliding_window(df, window_duration, sampling_rate=sampling_rate)
             
     result_df = pd.DataFrame(results, columns=['Start Timestamp', 'End Timestamp', 'FFT Result', 'Mean', 'Max', 'Standard Deviation', 'RMS', 'Kurtosis', 'Skewness', 'Peak-to-Peak', 'Abs Diff Signal', 'Alpha Power', 'Beta Power', 'Gamma Power', 'Delta Power', 'Theta Power'])
     
-    # Create DataFrame from FFT results and concatenate it with existing DataFrame
     fft_columns = [f'FFT_{i}' for i in range(125)]
     fft_df = pd.DataFrame(result_df['FFT Result'].tolist(), columns=fft_columns)
     result_df = pd.concat([result_df, fft_df], axis=1)
