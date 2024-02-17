@@ -1,5 +1,11 @@
 # EEG Signal Processing and Wheelchair Control
 
+<div align = "center">
+        <a href="https://ibb.co/6XB74yY" target="_blank">
+            <img src="https://i.ibb.co/wcsFKdy/dataset-cover.jpg" alt="dataset-cover">
+        </a>
+    </div>
+   
 ## Overview
 This project focuses on utilizing EEG (Electroencephalography) signals for controlling the movement of a wheelchair. EEG signals are recorded from the brain and processed to detect specific patterns associated with various mental activities, such as thinking about moving left, right, forward, or backward. These detected patterns are then used to control the direction of the wheelchair accordingly.
 
@@ -37,13 +43,15 @@ Follow these instructions to set up and run the EEG signal processing and wheelc
    ```
 5. Monitor the console for classification results and ensure the wheelchair moves accordingly.
 
-### Optional: Web Interface
-1. Integrate a web interface to visualize EEG signals and wheelchair movement using your preferred web development tools.
-2. Use WebSocket or HTTP requests to communicate between the Python EEG processing script and the web interface.
 
 ## Contributing
 Contributions are welcome! Please feel free to fork the repository, make changes, and submit a pull request.
 
+### Pending Contributions
+
+- **Web interface**: Imploying a web interface will be welcomed to better visualize the signals comming from the bioamp
+- **Model**: Using GNN, RNN or a more complex ML model to improve the recall and accuracy will also be welcomed
+  
 ## License
 EEG WheelChair Control © 2024 by Mind Mobilizers is licensed under [Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
