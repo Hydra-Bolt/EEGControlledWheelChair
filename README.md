@@ -1,5 +1,5 @@
-# EEG Signal Processing and Wheelchair Control
 
+<h1 align="center">EEG Signal Processing and Wheelchair Control </h1>
 <div align = "center">
         <a href="https://ibb.co/6XB74yY" target="_blank">
             <img src="https://i.ibb.co/wcsFKdy/dataset-cover.jpg" alt="dataset-cover">
