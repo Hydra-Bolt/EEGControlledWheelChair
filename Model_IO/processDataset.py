@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 import numpy as np
 from scipy.fft import fft
@@ -71,13 +70,13 @@ def process_data_with_sliding_window(df, window_duration, sampling_rate):
     return results
 
 def generate_model_input(df):
-    window_duration = 1 
+    window_duration = 0.8 
     sampling_rate = 125 
     results = process_data_with_sliding_window(df, window_duration, sampling_rate=sampling_rate)
             
     result_df = pd.DataFrame(results, columns=['Start Timestamp', 'End Timestamp', 'FFT Result', 'Mean', 'Max', 'Standard Deviation', 'RMS', 'Kurtosis', 'Skewness', 'Peak-to-Peak', 'Abs Diff Signal', 'Alpha Power', 'Beta Power', 'Gamma Power', 'Delta Power', 'Theta Power'])
     
-    fft_columns = [f'FFT_{i}' for i in range(125)]
+    fft_columns = [f'FFT_{i}' for i in range(100)]
     fft_df = pd.DataFrame(result_df['FFT Result'].tolist(), columns=fft_columns)
     result_df = pd.concat([result_df, fft_df], axis=1)
     

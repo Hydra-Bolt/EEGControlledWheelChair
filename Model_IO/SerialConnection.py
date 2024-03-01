@@ -18,7 +18,7 @@ FILES_STATES = {0: 'backward',1: 'left', 2: 'right', 3: 'forward'}
 FORMAT = "[%Y-%m-%d %H:%M:%S.%f]"
 TEMP = "./temp.csv"
 MODEL = load("./EEGCLASSIFIER.joblib")
-serial_connection = Serial("COM3", 115200)
+serial_connection = Serial("COM8", 115200)
 sleep(2)
 while True:
     # Get data from Arduino
